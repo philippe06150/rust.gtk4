@@ -1,3 +1,10 @@
+// work with :
+// gtk4-rs 0.9.1
+// GTK 4.14.4
+// it means in Cargo : 
+// [dependencies]
+// gtk = { version = "0.9.1", package = "gtk4" , features = ["v4_14"] }
+
 use gtk::{gdk::Display, gio, glib, prelude::*, Align::Start, /*Align::Center, Align::End*/};
 
 // do it local not to add 1 file for two lines !
