@@ -4,6 +4,7 @@
 // it means in Cargo : 
 // [dependencies]
 // gtk = { version = "0.9.1", package = "gtk4" , features = ["v4_14"] }
+// in Win, to get no console at runtime : cargo rustc --release -- -C link-args=-mwindows
 
 use gtk::{gdk::Display, gio, glib, prelude::*, Align::Start, /*Align::Center, Align::End*/};
 
