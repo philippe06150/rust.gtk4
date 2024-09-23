@@ -22,8 +22,6 @@ fn main() {
     application.connect_startup(on_startup);
     application.connect_activate(on_activate);
     application.run();
-	//
-	println!("Ca commence");
 }
 //
 // définition du Menu
@@ -138,7 +136,7 @@ fn on_activate(app: &gtk::Application) {
 	//                || b1  | dw    ||
 	//                || b2  |+sw---+||
 	//                || c1  ||tv   |||
-	//                || b3  ||     |||
+	//                || ..  ||     |||
 	//                || ll  ||     |||
 	//                || bq  |+-----+||
 	//                |+-----+-------+|
