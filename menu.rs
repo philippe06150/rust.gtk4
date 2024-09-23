@@ -29,9 +29,9 @@ fn main() {
 // définition du Menu
 //
 fn on_startup(app: &gtk::Application) {
-	//
-	// actions du Menu
-	//
+    //
+    // actions du Menu
+    //
     let about = gio::ActionEntry::builder("about")
         .activate(|_, _, _| println!("About was pressed"))
         .build();
@@ -39,9 +39,9 @@ fn on_startup(app: &gtk::Application) {
         .activate(|app: &gtk::Application, _, _| app.quit())
         .build();
     app.add_action_entries([about, quit]);
-	//
-	// menu : architecture
-	//
+    //
+    // menu : architecture
+    //
     let menubar = {
         let file_menu = {
             let about_menu_item = gio::MenuItem::new(
@@ -68,9 +68,9 @@ fn on_startup(app: &gtk::Application) {
 // mise en forme de la page
 //
 fn on_activate(app: &gtk::Application) {
-	//
+    //
     // importe CSS, boite noire pour moi :-(
-	//
+    //
     let provider = gtk::CssProvider::new();
 	provider.load_from_string(CSS);
     gtk::style_context_add_provider_for_display(
@@ -78,9 +78,9 @@ fn on_activate(app: &gtk::Application) {
         &provider,
         gtk::STYLE_PROVIDER_PRIORITY_APPLICATION,
     );
-	//
-	// window
-	//
+    //
+    // window
+    //
     let window = gtk::ApplicationWindow::builder()
         .application(app)
         .title("Exemple de Menu")
