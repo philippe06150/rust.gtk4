@@ -1,5 +1,6 @@
 use gtk::{gdk::Display, gio, glib, prelude::*, Align::Start, /*Align::Center, Align::End*/};
 
+// do it local not to add 1 file for two lines !
 const CSS: &str = "
 	.fenetre {border: solid 2px lightgrey;}
 	.quitter:hover {color: red; font-weight: bold;}
