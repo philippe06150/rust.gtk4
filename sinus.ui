@@ -1,76 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <object class="GtkApplicationWindow" id="window">
-    <property name="title">Fonction sinus</property>
-    <property name="default-width">800</property>
-    <property name="default-height">480</property>
-    <child>
-      <object class="GtkBox" id="h_box">
-        <property name="orientation">horizontal</property>
-		<property name="spacing">5</property>
-		<property name="margin-start">5</property>
-		<property name="margin-end">5</property>
-		<property name="margin-top">5</property>
-		<property name="margin-bottom">5</property>
-        <child>
-          <object class="GtkBox" id="v_box">
-          <property name="orientation">vertical</property>
-		  <property name="spacing">5</property>
-		  <property name="hexpand">False</property>
-          <property name="vexpand">True</property>
-		  	<child>
-              <object class="GtkLabel" id="label_0">
-                <property name="label">Dimensions :</property>
-			    <property name="yalign">0.0</property>
-			    <property name="xalign">0.0</property>
-			    <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <style>
-                  <class name="green"/>
-                </style>
-			  </object>
-			</child>
-		    <child>
-              <object class="GtkLabel" id="label_1">
-                <property name="label"></property>
-			    <property name="yalign">0.0</property>
-			    <property name="xalign">0.0</property>
-			    <property name="hexpand">False</property>
-                <property name="vexpand">False</property>
-                <style>
-                  <class name="red"/>
-                </style>
-			  </object>
-			</child>
-		    <child>
-              <object class="GtkLabel" id="label_2">
-                <property name="label"></property>
-			    <property name="hexpand">False</property>
-                <property name="vexpand">True</property>
-			  </object>
-			</child>
-		    <child>
-              <object class="GtkButton" id="bouton_1">
-                <property name="label">Quitter</property>
-			    <property name="hexpand">True</property>
-                <property name="vexpand">False</property>
-				<property name="action-name">window.close</property>
-			  </object>
-			</child>
-            </object>
-          </child>
-          <child>
-          <object class="GtkDrawingArea" id="drawing_area">
-            <property name="hexpand">True</property>
-            <property name="vexpand">True</property>
-			<property name="halign">fill</property>
-			<property name="valign">fill</property>
-            <style>
-              <class name="lightblue"/>
-            </style>
-          </object>
-        </child>
-      </object>
-    </child>
-  </object>
+	<object class="GtkApplicationWindow" id="window">
+		<property name="title">Fonction sinus</property>
+		<property name="default-width">800</property>
+		<property name="default-height">480</property>
+		<child>
+			<object class="GtkBox" id="h_box">
+				<property name="orientation">horizontal</property>
+				<property name="spacing">5</property>
+				<property name="margin-start">5</property>
+				<property name="margin-end">5</property>
+				<property name="margin-top">5</property>
+				<property name="margin-bottom">5</property>
+				<child>
+					<object class="GtkBox" id="v_box">
+						<property name="orientation">vertical</property>
+						<property name="spacing">5</property>
+						<property name="hexpand">False</property>
+						<property name="vexpand">True</property>
+						<child>
+							<object class="GtkLabel" id="label_0">
+								<property name="label">Dimensions :</property>
+								<property name="yalign">0.0</property>
+								<property name="xalign">0.0</property>
+								<property name="hexpand">False</property>
+								<property name="vexpand">False</property>
+								<style></style>
+							</object>
+						</child>
+						<child>
+							<object class="GtkLabel" id="label_1">
+								<property name="label"></property>
+								<property name="yalign">0.0</property>
+								<property name="xalign">0.0</property>
+								<property name="hexpand">False</property>
+								<property name="vexpand">False</property>
+								<style></style>
+							</object>
+						</child>
+						<child>
+							<object class="GtkLabel" id="label_2">
+								<property name="label"></property>
+								<property name="hexpand">False</property>
+								<property name="vexpand">True</property>
+							</object>
+						</child>
+						<child>
+							<object class="GtkButton" id="bouton_1">
+								<property name="label">Quitter</property>
+								<property name="hexpand">True</property>
+								<property name="vexpand">False</property>
+								<property name="action-name">window.close</property>
+							</object>
+						</child>
+					</object>
+				</child>
+				<child>
+					<object class="GtkDrawingArea" id="drawing_area">
+						<property name="hexpand">True</property>
+						<property name="vexpand">True</property>
+						<property name="halign">fill</property>
+						<property name="valign">fill</property>
+						<style></style>
+					</object>
+				</child>
+			</object>
+		</child>
+	</object>
 </interface>
