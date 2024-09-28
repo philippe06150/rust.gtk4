@@ -1,0 +1,30 @@
+.fenetre {
+	background-color : #FFFFFF;
+	border-radius: 10px;
+	border: double 3px darkgrey;
+}
+.bouton {
+	
+}
+.bouton:hover {
+	background-color : lightblue;
+	color: red;
+}
+.mon_texte {
+	border-radius: 5px;
+	padding: 5px;
+	color: black;
+	background-color: lightgrey;
+}
+.dessin {
+	background-color : #E4F5F5;
+	border-radius: 10px;
+	border: solid 1px darkgrey;
+}
+.monquit {
+	border-radius: 0.25em;
+	font-size: 1.1em;
+}
+.monquit:hover {
+	color: red;
+}
