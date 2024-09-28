@@ -1,0 +1,12 @@
+.green {
+	color: green;
+	text-decoration: underline;
+	padding: 0px 20px 0px 0px;
+}
+.lightblue {
+	background-color: #DDD;
+	border: groove 3px blue;
+}
+.red {
+	color: red;
+}
