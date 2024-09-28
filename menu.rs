@@ -1,5 +1,5 @@
 // work with :
-// gtk4-rs 0.9.1
+// gtk4-rs 0.9.2
 // GTK 4.14.4
 // it means in Cargo :
 // [dependencies]
