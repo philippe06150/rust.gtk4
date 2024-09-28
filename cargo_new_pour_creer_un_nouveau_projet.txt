@@ -1,0 +1,94 @@
+cargo build : compile version debug
+cargo build --release : compile version release
+cargo run : compile & lance le pgme
+cargo run --jobs 8 : compile & lance le pgme avec 8 coeurs, semble ne pas marcher !!
+cargo add (crate) : rajoute une dépendance
+cargo add gtk4 -features v4_12 --rename gtk : rajoute une dépendance & la renomme (ici gtk4 -> gtk)
+cargo rustc --release -- -C link-args=-mwindows : no console
+cargo clean : efface tout et garde juste le source et toml
+cargo update = met a jour les crates
+cargo update -p gtk4 = met a jour un crate, gtk4 ici
+
+install GTK 4 and the build essentials
+debian : sudo apt install libgtk-4-dev build-essential
+win : https://gtk-rs.org/gtk4-rs/stable/latest/book/installation_windows.html
+
+mise à jour RUST : rustup update
+
+// optimisation taille executable en release
+// voir https://github.com/johnthagen/min-sized-rust
+
+[dependencies]
+chrono = { git = "https://github.com/chronotope/chrono.git", package = "chrono"}
+gtk = { git = "https://github.com/gtk-rs/gtk4-rs.git", package = "gtk4" , features = ["v4_14"]}
+
+[profile.release]
+strip = true
+panic = "abort"
+opt-level = "z"
+lto = true
+codegen-units = 1
+
+[profile.dev]
+strip = true
+panic = "abort"
+opt-level = "z"
+lto = true
+codegen-units = 8
+
+
+toolchains < >: ( https://rust-lang.github.io/rustup/concepts/toolchains.html )
+pour choisir la toolchain par défaut : rustup default < >
+pour installer une toolchain : rustup toolchain install < >
+pour desinstaller : rustup toolchain uninstall < >
+pour compiler : cargo +< > run
+< > peut être:
+	stable beta nightly
+	stable-msvc stable-gnu
+	stable-x86_64-pc-windows-msvc  - rustc 1.71.1         (eb26296b5 2023-08-03)
+	beta-x86_64-pc-windows-msvc    - rustc 1.72.0-beta.8  (598a0a3cb 2023-08-12)
+	nightly-x86_64-pc-windows-msvc - rustc 1.73.0-nightly (0bdb00d55 2023-08-15)
+	
+lister les icones dispo : gtk4-icon-browser
+lister les widgets : gtk4-widget-factory
+gtk4 demo : gtk4-demo (ds le paquet gtk-4-examples)
+
+gtk4-broadwayd
+fournit la prise en charge de l'affichage des applications GTK 4 dans un navigateur 
+web avec HTML5 et les web sockets
+
+gtk4-builder-tool
+effectue diverses opération sur les fichiers .ui de GtkBuilder
+
+gtk4-demo
+est un simple programme qui démontre certaines taches qu'on peut faire avec GTK 4
+
+gtk4-demo-application
+est une simple application GTK 4 utile pour les tests
+
+gtk4-encode-symbolic-svg
+convertit les icônes SVG symboliques en fichiers PNG spéciaux. GTK 4 peut charger et 
+recolorer ces PNG, comme les SVG originaux, mais il les charge bien plus rapidement.
+
+gtk4-icon-browser
+est un utilitaire pour explorer les icônes du thème d'icônes actuel. Il montre les icônes 
+dans plusieurs tailles, leurs variantes symboliques si elles sont disponibles, ainsi qu'une 
+description de l'icône et de son contexte.
+
+gtk4-launch
+lance une application avec un nom donné. Le nom doit correspondre au nom de fichier .desktop 
+de l'application (tel qu'il apparaît dans /usr/share/applications), avec ou sans l'extension 
+« .desktop »
+
+gtk4-print-editor
+est un simple programme pour démontrer l'impression avec les applications GTK 4
+
+gtk4-query-settings
+fournit une liste complète de tous les paramètres liés à GTK 4
+
+gtk4-update-icon-cache
+est un utilitaire de mise en cache des thèmes d'icônes qui crée des fichiers de cache 
+utilisables avec mmap pour les thèmes d'icônes
+
+gtk4-widget-factory
+est un programme pour visualiser les thèmes GTK 4 et les widgets 
