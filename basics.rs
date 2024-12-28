@@ -1,7 +1,10 @@
 use gtk::{gio, glib, prelude::*};
 
 fn main() -> glib::ExitCode {
-    let application = gtk::Application::new(None::<String>, gio::ApplicationFlags::FLAGS_NONE);
+    let application = gtk::Application::new(
+        None::<String>, 
+        gio::ApplicationFlags::FLAGS_NONE
+    );
     application.connect_activate(build_ui);
     application.run()
 }
