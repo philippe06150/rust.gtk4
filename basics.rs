@@ -66,9 +66,9 @@ fn build_ui(application: &gtk::Application) {
         println!("Nombre click = {} - Position = {:.0}x{:.0}", n, x, y);
     });
     da.add_controller(gesture); // Assigne gesture à da
-                                //
-                                // fenêtre
-                                //
+    //
+    // fenêtre
+    //
     window.set_child(Some(&mygrid));
     window.present();
 }
