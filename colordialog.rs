@@ -66,13 +66,13 @@ fn build_ui(app: &gtk4::Application) {
             None::<&gio::Cancellable>,
             move |result| {
                 // Le callback reçoit le résultat de la sélection
-                let r = result.unwrap();
-                let rr = format!("rgb({} {} {})", 
-					(r.red()*255.0) as i32, 
-                    (r.green()*255.0) as i32, 
-                    (r.blue()*255.0) as i32,
-                );
-                moncss(&rr);
+                if let Ok(r) = result {
+					let rr = format!("rgb({} {} {})", 
+						(r.red()*255.0) as i32, 
+						(r.green()*255.0) as i32, 
+						(r.blue()*255.0) as i32);
+					moncss(&rr);
+				}
             }
         );
     }));
