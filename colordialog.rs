@@ -1,6 +1,11 @@
+//
+// marche avec gtk4-rs 0.11.5 avec feature à v4_18
+// ie dans Cargo.toml :
+// gtk4 = { version = "0.11.5", features = ["v4_18"] }
+//
 use gtk4::{prelude::*, glib, gdk, gio};
 use std::cell::RefCell;
-
+//
 // la fonction CssProvider::new() n'est pas une fonction const
 // l'astuce consiste à initialiser un RefCell contenant 
 // Option<CssProvider> avec la valeur None !!!
