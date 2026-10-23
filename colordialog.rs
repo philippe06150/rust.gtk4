@@ -1,6 +1,6 @@
 //
 // marche avec rust 1.99.1
-// & gtk4-rs 0.11.5 avec feature à v4_18
+// & gtk4-rs 0.11.5 avec feature à v4_18 (version GTK4 sous debian 13 trixie)
 // ie dans Cargo.toml :
 // gtk4 = { version = "0.11.5", features = ["v4_18"] }
 //
@@ -25,11 +25,11 @@ fn main() {
 }
 
 fn start_ui(_: &gtk4::Application) {
+	// CSS
+	moncss("rgb(0 255 0)");
 }
 
 fn build_ui(app: &gtk4::Application) {
-	// CSS
-	moncss("rgb(0 255 0)");
     // Création du bouton qui va déclencher le dialogue
     let button = gtk4::Button::builder()
 		.label("Choisir une couleur")
