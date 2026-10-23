@@ -68,9 +68,9 @@ fn build_ui(app: &gtk4::Application) {
                 // Le callback reçoit le résultat de la sélection
                 if let Ok(r) = result {
 					let rr = format!("rgb({} {} {})", 
-						(r.red()*255.0) as i32, 
-						(r.green()*255.0) as i32, 
-						(r.blue()*255.0) as i32);
+						(r.red()*255.0) as u8, 
+						(r.green()*255.0) as u8, 
+						(r.blue()*255.0) as u8);
 					moncss(&rr);
 				}
             }
