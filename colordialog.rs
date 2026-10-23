@@ -1,5 +1,6 @@
 //
-// marche avec gtk4-rs 0.11.5 avec feature à v4_18
+// marche avec rust 1.99.1
+// & gtk4-rs 0.11.5 avec feature à v4_18
 // ie dans Cargo.toml :
 // gtk4 = { version = "0.11.5", features = ["v4_18"] }
 //
